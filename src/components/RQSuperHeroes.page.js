@@ -10,8 +10,8 @@ export const RQSuperHeroes = () => {
   const [fetchInterval, setFetchInterval] = useState(3000);
 
   const onSuccess = (result) => {
-    console.log("Perform side effect after data fetching", result.data);
-    if (result.data.length >= 4) {
+    console.log("Perform side effect after data fetching", result);
+    if (result.length >= 4) {
       setFetchInterval(false);
       console.log("fetch interval", fetchInterval);
     }
@@ -29,6 +29,10 @@ export const RQSuperHeroes = () => {
       refetchInterval: fetchInterval,
       onSuccess,
       onError,
+      select: (data) => {
+        const superHeroNames = data.data.map((hero) => hero.name);
+        return superHeroNames;
+      },
     }
   );
 
@@ -44,10 +48,15 @@ export const RQSuperHeroes = () => {
 
   return (
     <>
-      <h2>RQ Super Heroes</h2>
+      {/* <h2>RQ Super Heroes</h2>
       <button onClick={refetch}>Fetch Heroes</button>
       {data?.data.map((hero) => {
         return <div key={hero.name}>{hero.name}</div>;
+      })} */}
+      <h2>RQ Super Heroes</h2>
+      <button onClick={refetch}>Fetch Heroes</button>
+      {data.map((heroName) => {
+        return <div key={heroName}>{heroName}</div>;
       })}
     </>
   );
