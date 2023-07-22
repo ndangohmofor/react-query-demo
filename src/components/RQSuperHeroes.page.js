@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-
-const fetchSuperHeroes = () => {
-  return axios.get("http://localhost:4000/superheroes");
-};
+import { useSuperHeroesData } from "../hooks/useSuperHeroesData";
 
 export const RQSuperHeroes = () => {
   const [fetchInterval, setFetchInterval] = useState(3000);
@@ -22,19 +17,12 @@ export const RQSuperHeroes = () => {
     setFetchInterval(false);
   };
 
-  const { isLoading, data, isError, error, isFetching, refetch } = useQuery(
-    ["super-heroes"],
-    fetchSuperHeroes,
-    {
-      refetchInterval: fetchInterval,
-      onSuccess,
-      onError,
-      select: (data) => {
-        const superHeroNames = data.data.map((hero) => hero.name);
-        return superHeroNames;
-      },
-    }
-  );
+  const hookConfigs = {
+    fetchInterval: fetchInterval,
+  };
+
+  const { isLoading, data, isError, error, isFetching, refetch } =
+    useSuperHeroesData(onSuccess, onError, hookConfigs);
 
   console.log({ isLoading, isFetching });
 
