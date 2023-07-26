@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useSuperHeroesData } from "../hooks/useSuperHeroesData";
 
 export const RQSuperHeroes = () => {
@@ -6,7 +7,7 @@ export const RQSuperHeroes = () => {
 
   const onSuccess = (result) => {
     console.log("Perform side effect after data fetching", result);
-    if (result.length >= 4) {
+    if (result.data.length >= 4) {
       setFetchInterval(false);
       console.log("fetch interval", fetchInterval);
     }
@@ -36,16 +37,20 @@ export const RQSuperHeroes = () => {
 
   return (
     <>
-      {/* <h2>RQ Super Heroes</h2>
-      <button onClick={refetch}>Fetch Heroes</button>
-      {data?.data.map((hero) => {
-        return <div key={hero.name}>{hero.name}</div>;
-      })} */}
       <h2>RQ Super Heroes</h2>
       <button onClick={refetch}>Fetch Heroes</button>
-      {data.map((heroName) => {
-        return <div key={heroName}>{heroName}</div>;
+      {data?.data.map((hero) => {
+        return (
+          <div key={hero.name}>
+            <Link to={`/rq-super-heroes/${hero.id}`}>{hero.name}</Link>
+          </div>
+        );
       })}
+      <h2>RQ Super Heroes</h2>
+      <button onClick={refetch}>Fetch Heroes</button>
+      {/* {data.map((heroName) => {
+        return <div key={heroName}>{heroName}</div>;
+      })} */}
     </>
   );
 };
