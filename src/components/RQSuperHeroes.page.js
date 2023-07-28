@@ -35,6 +35,8 @@ export const RQSuperHeroes = () => {
     return <h2>{error.message}</h2>;
   }
 
+  console.log("Data: ", data);
+
   return (
     <>
       <h2>RQ Super Heroes</h2>

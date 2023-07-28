@@ -10,7 +10,37 @@ const fetchFriends = () => {
 };
 
 export const ParallelQueries = () => {
-  const { data: superHeroes } = useQuery("super-heroes", fetchSuperHeroes);
-  const { data: friends } = useQuery("friends", fetchFriends);
-  return <div>ParallelQueriesPage</div>;
+  const { isLoading: heroLoad, data: superHeroes } = useQuery(
+    ["super-heroes"],
+    fetchSuperHeroes
+  );
+  const { isLoading: friendLoad, data: friends } = useQuery(
+    ["friends"],
+    fetchFriends
+  );
+
+  return (
+    <>
+      <div>
+        <ul>
+          {!heroLoad &&
+            superHeroes.data.map((hero) => {
+              return (
+                <li key={hero.id}>
+                  {hero.name} = {hero.alterEgo}
+                </li>
+              );
+            })}
+        </ul>
+      </div>
+      <div>
+        <ul>
+          {!friendLoad &&
+            friends.data.map((friend) => {
+              return <li key={friend.id}>{friend.name}</li>;
+            })}
+        </ul>
+      </div>
+    </>
+  );
 };
