@@ -20,5 +20,23 @@
       "name": "Dead Pool",
       "alterEgo": "Slate Wilson"
     }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Fisla Mboli Nchayi"
+    },
+    {
+      "id": 2,
+      "name": "Enoh Effangafa Tanyi"
+    },
+    {
+      "id": 3,
+      "name": "Sam Jacobson"
+    },
+    {
+      "id": 4,
+      "name": "Susan B Marteens"
+    }
   ]
 }
