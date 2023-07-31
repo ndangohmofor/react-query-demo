@@ -38,5 +38,7 @@
       "id": 4,
       "name": "Susan B Marteens"
     }
-  ]
+  ],
+  "users": [{ "id": "mofor@example.com", "channelId": "meufty" }],
+  "channels": [{ "id": "meufty", "courses": ["react", "vue", "angular"] }]
 }
