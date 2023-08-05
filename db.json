@@ -40,5 +40,47 @@
     }
   ],
   "users": [{ "id": "mofor@example.com", "channelId": "meufty" }],
-  "channels": [{ "id": "meufty", "courses": ["react", "vue", "angular"] }]
+  "channels": [{ "id": "meufty", "courses": ["react", "vue", "angular"] }],
+  "colors": [
+    {
+      "id": 1,
+      "label": "red"
+    },
+    {
+      "id": 2,
+      "label": "blue"
+    },
+    {
+      "id": 3,
+      "label": "green"
+    },
+    {
+      "id": 4,
+      "label": "yellow"
+    },
+    {
+      "id": 5,
+      "label": "black"
+    },
+    {
+      "id": 6,
+      "label": "white"
+    },
+    {
+      "id": 7,
+      "label": "orange"
+    },
+    {
+      "id": 8,
+      "label": "purple"
+    },
+    {
+      "id": 9,
+      "label": "indigo"
+    },
+    {
+      "id": 10,
+      "label": "magenta"
+    }
+  ]
 }
