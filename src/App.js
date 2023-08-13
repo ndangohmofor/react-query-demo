@@ -11,6 +11,7 @@ import { ParallelQueries } from "./components/ParallelQueries.page";
 import { DynamicParallelPage } from "./components/DynamicParallel.page";
 import { DependentQueriesPage } from "./components/DependentQueries.page";
 import { PaginatedQueriesPage } from "./components/PaginatedQueries.page";
+import { InfiniteQueries } from "./components/InfiniteQueries.page";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ function App() {
             </ul>
           </nav>
           <Routes>
+            <Route path="/rq-infinite" element={<InfiniteQueries />} />
             <Route path="/rq-paginated" element={<PaginatedQueriesPage />} />
             <Route
               path="/rq-super-heroes/:heroId"
