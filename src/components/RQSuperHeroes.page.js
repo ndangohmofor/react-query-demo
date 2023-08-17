@@ -58,11 +58,13 @@ export const RQSuperHeroes = () => {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          placeholder="Hero name"
         />
         <input
           type="text"
           value={alterEgo}
           onChange={(e) => setAlterEgo(e.target.value)}
+          placeholder="Alter Ego"
         />
         <button onClick={handleAddHeroClick}>Add Hero</button>
       </div>
@@ -74,9 +76,9 @@ export const RQSuperHeroes = () => {
           </div>
         );
       })}
-      <h2>RQ Super Heroes</h2>
+      {/* <h2>RQ Super Heroes</h2>
       <button onClick={refetch}>Fetch Heroes</button>
-      {/* {data.map((heroName) => {
+      {data.map((heroName) => {
         return <div key={heroName}>{heroName}</div>;
       })} */}
     </>

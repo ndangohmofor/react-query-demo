@@ -34,6 +34,31 @@
       "name": "Iron Man",
       "alterEgo": "Tony Stark",
       "id": 7
+    },
+    {
+      "name": "Shazam",
+      "alterEgo": "Billy Batson",
+      "id": 8
+    },
+    {
+      "name": "Catwoman",
+      "alterEgo": "Selina Kyle",
+      "id": 9
+    },
+    {
+      "name": "Joker",
+      "alterEgo": "Joaquin Phoenix",
+      "id": 10
+    },
+    {
+      "name": "Green Arrow",
+      "alterEgo": "Oliver Queen",
+      "id": 11
+    },
+    {
+      "name": "Aquaman",
+      "alterEgo": "Jason Momoa",
+      "id": 12
     }
   ],
   "friends": [
