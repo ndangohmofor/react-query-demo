@@ -19,6 +19,21 @@
       "id": 4,
       "name": "Dead Pool",
       "alterEgo": "Slate Wilson"
+    },
+    {
+      "name": "The Flash",
+      "alterEgo": "Barry Allen",
+      "id": 5
+    },
+    {
+      "name": "Dead Shot",
+      "alterEgo": "Slate Wilson",
+      "id": 6
+    },
+    {
+      "name": "Iron Man",
+      "alterEgo": "Tony Stark",
+      "id": 7
     }
   ],
   "friends": [
@@ -39,8 +54,22 @@
       "name": "Susan B Marteens"
     }
   ],
-  "users": [{ "id": "mofor@example.com", "channelId": "meufty" }],
-  "channels": [{ "id": "meufty", "courses": ["react", "vue", "angular"] }],
+  "users": [
+    {
+      "id": "mofor@example.com",
+      "channelId": "meufty"
+    }
+  ],
+  "channels": [
+    {
+      "id": "meufty",
+      "courses": [
+        "react",
+        "vue",
+        "angular"
+      ]
+    }
+  ],
   "colors": [
     {
       "id": 1,

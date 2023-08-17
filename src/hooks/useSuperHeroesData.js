@@ -1,8 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation } from "@tanstack/react-query";
 import axios from "axios";
 
 const fetchSuperHeroes = () => {
   return axios.get("http://localhost:4000/superheroes");
+};
+
+const addSuperHero = (hero) => {
+  return axios.post("http://localhost:4000/superheroes", hero);
 };
 
 export const useSuperHeroesData = (onSuccess, onError, configs) => {
@@ -16,4 +20,8 @@ export const useSuperHeroesData = (onSuccess, onError, configs) => {
     //   return superHeroNames;
     // },
   });
+};
+
+export const useAddSuperHeroesData = () => {
+  return useMutation(addSuperHero);
 };
