@@ -59,6 +59,26 @@
       "name": "Aquaman",
       "alterEgo": "Jason Momoa",
       "id": 12
+    },
+    {
+      "name": "Cyborg",
+      "alterEgo": "Victor \"Vic\" Stone",
+      "id": 13
+    },
+    {
+      "name": "Green Lantern",
+      "alterEgo": "Hal Jordan",
+      "id": 14
+    },
+    {
+      "name": "Daredevil",
+      "alterEgo": "Matt Murdock",
+      "id": 15
+    },
+    {
+      "name": "Batgirl",
+      "alterEgo": "Barbara Gordon",
+      "id": 16
     }
   ],
   "friends": [
