@@ -79,6 +79,16 @@
       "name": "Batgirl",
       "alterEgo": "Barbara Gordon",
       "id": 16
+    },
+    {
+      "name": "newHero",
+      "alterEgo": "newAlterEgo",
+      "id": 17
+    },
+    {
+      "name": "newHero1",
+      "alterEgo": "newAlterEgo1",
+      "id": 18
     }
   ],
   "friends": [
